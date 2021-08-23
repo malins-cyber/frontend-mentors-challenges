@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'PoppinsRegular';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Poppins'), local('PoppinsRegular'), url(./PoppinsRegular.css) format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --red-color: hsl(0, 100%, 74%);
+  --green-color: hsl(154, 59%, 51%);
+  --accent: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+  background-image: url(./images/bg-intro-desktop.png);
+  background-color: var(--red-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  height: 100vh;
+  max-height: 100%;
+}
+
+.form-content {
+  color: white;
+  /* padding: 1em; */
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.wrapper{
+  margin-bottom: 1em;
+  padding: 1.3em;
+  background: white;
+  border-radius: .5em;
+  box-shadow: 0px 8px 3px #3b3b3c43;
+}
+
+.header{
+  margin: 1em 0;
+  padding: 1em;
+  font-weight: 400;
+  text-align: center;
+  border-radius: .3em;
+  text-align: center;
+  color: var(--Grayish-Blue);
+  background: var(--accent);
+  box-shadow: 0px 8px 3px #3b3b3c43;
+}
+
+.form-group{
+  position: relative;
+  margin-bottom: 1.7em;
+  /* margin-bottom: 1em; */
+}
+
+.form-control{
+  position: relative;
+  padding: 1em;
+  width: 100%;
+  padding-bottom: 1em;
+  /* margin-bottom: 1em; */
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: .3em;
+  border: 1px solid var(--Grayish-Blue);
+  outline: none;
+}
+
+.form-control:hover {
+  border: 1px solid var(--Dark-Blue);
+}
+
+.form-group img{
+  opacity: 0;
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	height: 20px;
+  /* visibility: hidden; */
+}
+
+.form-group.error img {
+	opacity: 1;
+}
+
+.form-group small{
+  padding-top: .5em;
+  float: right;
+  font-size: .7rem;
+  color: var(--red-color);
+  left: 40%;
+  font-weight: 600;
+}
+
+.form-group small {
+	opacity: 0;
+}
+
+.form-group.error small {
+	opacity: 1;
+}
+
+.form-group.error input {
+	border-color: hsl(0, 100%, 74%);
+	color: hsl(0, 100%, 74%);
+}
+
+.form-group.error input::placeholder {
+	color: hsl(0, 100%, 74%);
+}
+
+
+.big-font{
+  font-size: 1.8rem;
+  padding-bottom: .5em;
+  font-weight: 700;
+}
+
+.small-text {
+  text-align: center;
+  font-size: .8rem;
+  color: var(--Grayish-Blue);
+}
+
+.top-text {
+  color: white;
+  font-weight: 700;
+}
+
+.submit-btn {
+  padding: 1.3em 2em;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: var(--green-color);
+  border: none;
+  font-weight: 700;
+  border-radius: .3em;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}
+
+/* .submit-btn:hover {
+  cursor: pointer;
+  transform: scale(.98);
+} */
+
+button:active {
+	box-shadow: 0 0 hsl(154, 59%, 45%);
+	transform: translateY(2px);
+}
+
+.terms {
+  color: var(--red-color);
+  font-weight: 700;
+}
+
+.terms:hover {
+  cursor: pointer;
+}
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (min-width:1024px){
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .form-content{
+    width: 30em;
+    /* background: gray; */
+    padding: 2em;
+    margin-right: 3em;
+  }
+
+  .big-font{
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .form-content p{
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .form-content{
+    width: 30em;
+    /* background: gray; */
+    padding: 2em;
+    margin-right: 3em;
+  }
+
+  .big-font{
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .form-content p{
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+}
